@@ -6,3 +6,5 @@ your face back and fourth or left and right. If that still doesnt work you can g
 the height and width size parameters. Positive X and Y params move the image left and upwards respectively, and in cases where you don't want to change the size, the 
 load_no_resize() function can also be called. In the event that the image is perfectly overlayed in its default position, calling the aformentioned function with a 1 for
 X location and 1 for Y location will keep it in its default location. 
+
+GUI and mix and match coming soon...
