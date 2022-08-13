@@ -99,6 +99,7 @@ def hair():
 
     else:
         print("invalid input, please try again")
+        quit()
 
 def glasses():
     print("you have chosen glasses. Please choose what glasses you would like to try first\n1.plain "
@@ -173,6 +174,7 @@ def glasses():
 
     else:
         print("invalid input, please try again")
+        quit()
 
 def facial_hair():
     print("you have chosen facial hair. Please choose what facial hair you would like to try first\n1.full "
@@ -249,6 +251,7 @@ def facial_hair():
 
     else:
         print("invalid input, please try again")
+        quit()
 
 def ensemble():
     print("you have chosen full ensemble. Please choose what combination you would like to try first\n1.hipster "
@@ -323,24 +326,73 @@ def ensemble():
 
     else:
         print("invalid input, please try again")
+        quit()
 
 def custom():
-    file_path = str(input("Enter file path here:"))
-    name = '{}'.format(file_path)
-    load(name, 1.5, 1.5, 45, 75)
-    y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
-    if (y == 1):
-        custom()
+    type = int(input("Is this a\n1.Hairpiece\n2.Type of eyewear\n3.Facial hair style\n4:Neither and you want to go "
+                     "back: "))
 
-    elif (y == 2):
+    if(type == 1):
+        file_path = str(input("Enter file path here:"))
+        name = '{}'.format(file_path)
+        load(name, 1.5, 1.5, 45, 75)
+        y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
+        if (y == 1):
+            custom()
+
+        elif (y == 2):
+            main()
+
+        elif (y == 3):
+            quit()
+
+        else:
+            print("invalid, please try again later")
+            quit()
+
+    elif (type == 2):
+        file_path = str(input("Enter file path here:"))
+        name = '{}'.format(file_path)
+        load(name, 1.5, 1.5, 45, 75)
+        y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
+        if (y == 1):
+            custom()
+
+        elif (y == 2):
+            main()
+
+        elif (y == 3):
+            quit()
+
+        else:
+            print("invalid, please try again later")
+            quit()
+
+    elif (type == 3):
+        file_path = str(input("Enter file path here:"))
+        name = '{}'.format(file_path)
+        load(name, 1.5, 1.5, 45, 75)
+        y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
+        if (y == 1):
+            custom()
+
+        elif (y == 2):
+            main()
+
+        elif (y == 3):
+            quit()
+
+        else:
+            print("invalid, please try again later")
+            quit()
+
+    elif (type == 4):
         main()
 
-    elif (y == 3):
+    else:
+        print("invalid input, please try again")
         quit()
 
-    else:
-        print("invalid, please try again later")
-        quit()
 
 def mix_and_match():
     print("choose what combination of items you would like to try ")
