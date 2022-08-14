@@ -8,4 +8,10 @@ load_no_resize() function can also be called. In the event that the image is per
 X location and 1 for Y location will keep it in its default location. 
 
 EDIT:
-Finished mix and matching, updated custom styling, added randomizing feature, GUI update coming later
+Finished mix and matching 
+Updated custom styling
+Added randomizing feature
+
+Coming soon:
+GUI update
+Additional styles
