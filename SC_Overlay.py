@@ -1,5 +1,6 @@
 from cv2 import cv2
 import cvzone
+import random
 
 
 def two_load(destination1, x1_multiplier, y1_multiplier, x1_location, y1_location, destination2, x2_multiplier,
@@ -71,7 +72,7 @@ def load_no_resize(destination, x_location, y_location):
 
 def hair():
     print("you have chosen hair. Please choose what hairstyle you would like to try first\n1.basic hair\n2.white "
-          "hair\n3.top hat\n4.go back")
+          "hair\n3.top hat\n4.custom hair \n5.random hair\n6.go back")
 
     x = int(input("Enter what you would like to try on here:"))
     if (x == 1):
@@ -123,6 +124,78 @@ def hair():
             quit()
 
     elif (x == 4):
+        file_path = str(input("Enter file path here:"))
+        name = '{}'.format(file_path)
+        load(name, 1.5, 1.5, 45, 75)
+        y = int(input("would you like to\n1.try other hairstyles\n2.go to main menu\n3.close app\n"))
+        if (y == 1):
+            hair()
+
+        elif (y == 2):
+            main()
+
+        elif (y == 3):
+            quit()
+
+        else:
+            print("invalid, please try again later")
+            quit()
+
+    elif (x == 5):
+        z = random.randint(1, 3)
+        if (z == 1):
+            load('hair/basic hair.png', 3, 2, 175, 160)
+            y = int(input("would you like to\n1.try other hairstyles\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 2):
+            load('hair/chadcut.png', 1.3, 0.5, 20, 40)
+            y = int(input("would you like to\n1.try other hairstyles\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 3):
+            load('hair/top hat.png', 1.5, 1, 40, 150)
+            y = int(input("would you like to\n1.try other hairstyles\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        else:
+            print("invalid input, please try again later")
+            quit()
+
+    elif (x == 6):
         main()
 
     else:
@@ -132,7 +205,8 @@ def hair():
 
 def glasses():
     print("you have chosen glasses. Please choose what glasses you would like to try first\n1.plain "
-          "sunglasses\n2.rhinestone glasses\n3.star sunglasses\n4.red sunglasses\n5.go back")
+          "sunglasses\n2.rhinestone glasses\n3.star sunglasses\n4.red sunglasses\n5.custom sunglasses\n6.random "
+          "sunglasses\n7.go back")
     x = int(input("Enter what you would like to try on here:"))
     if (x == 1):
         load('glasses/plain sunglasses.png', 2, 1, 70, 10)
@@ -199,6 +273,95 @@ def glasses():
             quit()
 
     elif (x == 5):
+        file_path = str(input("Enter file path here:"))
+        name = '{}'.format(file_path)
+        load(name, 1.5, 1.5, 45, 75)
+        y = int(input("would you like to\n1.try other glasses\n2.go to main menu\n3.close app\n"))
+        if (y == 1):
+            glasses()
+
+        elif (y == 2):
+            main()
+
+        elif (y == 3):
+            quit()
+
+        else:
+            print("invalid, please try again later")
+            quit()
+
+    elif (x == 6):
+        z = random.randint(1, 4)
+        if (z == 1):
+            load('glasses/plain sunglasses.png', 2, 1, 70, 10)
+            y = int(input("would you like to\n1.try other glasses\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                glasses()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 2):
+            load('glasses/rhinestone glasses.png', 1, 0.5, 0, -15)
+            y = int(input("would you like to\n1.try other glasses\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                glasses()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 3):
+            load('glasses/star.png', 1, 1, 0, 15)
+            y = int(input("would you like to\n1.try other glasses\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                glasses()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 4):
+            load('glasses/sunglass.png', 1, 1, 0, 15)
+            y = int(input("would you like to\n1.try other glasses\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                glasses()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+
+        else:
+            print("invalid input, please try again later")
+            quit()
+
+    elif (x == 7):
         main()
 
     else:
@@ -208,9 +371,8 @@ def glasses():
 
 def facial_hair():
     print("you have chosen facial hair. Please choose what facial hair you would like to try first\n1.full "
-          "beard\n2.hipster beard\n3.mustache and goatee combo\n4.mustache\n5.go back\nNOTE: for detection, "
-          "it helps to keep the "
-          "camera at a bit of a distance between your face and it")
+          "beard\n2.hipster beard\n3.mustache and goatee combo\n4.mustache\n5.custom facial hair\n6.random\n7.go "
+          "back\nNOTE: for detection, it helps to keep the camera at a bit of a distance between your face and it")
     x = int(input("Enter what you would like to try on here:"))
     if (x == 1):
         load('beard/Full Beard.png', 2, 2.2, 65, 20)
@@ -277,6 +439,94 @@ def facial_hair():
             quit()
 
     elif (x == 5):
+        file_path = str(input("Enter file path here:"))
+        name = '{}'.format(file_path)
+        load(name, 1.5, 1.5, 45, -75)
+        y = int(input("would you like to\n1.try other facial hairstyles\n2.go to main menu\n3.close app\n"))
+        if (y == 1):
+            facial_hair()
+
+        elif (y == 2):
+            main()
+
+        elif (y == 3):
+            quit()
+
+        else:
+            print("invalid, please try again later")
+            quit()
+
+    elif (x == 6):
+        z = random.randint(1, 4)
+        if (z == 1):
+            load('beard/Full Beard.png', 2, 2.2, 65, 20)
+            y = int(input("would you like to\n1.try other beards\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                facial_hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 2):
+            load('beard/hippy beard.png', 1.5, 1.5, 40, -20)
+            y = int(input("would you like to\n1.try other beards\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                facial_hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 3):
+            load('beard/Mustach+goatee.png', 1.5, 1.5, 35, -30)
+            y = int(input("would you like to\n1.try other beards\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                facial_hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        elif (z == 4):
+            load_no_resize('beard/mustache.png', 35, -75)
+            y = int(input("would you like to\n1.try other beards\n2.go to main menu\n3.close app\n"))
+            if (y == 1):
+                facial_hair()
+
+            elif (y == 2):
+                main()
+
+            elif (y == 3):
+                quit()
+
+            else:
+                print("invalid, please try again later")
+                quit()
+
+        else:
+            print("invalid input, please try again later")
+            quit()
+
+    elif (x == 7):
         main()
 
     else:
@@ -360,75 +610,9 @@ def ensemble():
         quit()
 
 
-def custom():
-    type = int(input("Is this a\n1.Hairpiece\n2.Type of eyewear\n3.Facial hair style\n4:Neither and you want to go "
-                     "back: "))
-
-    if (type == 1):
-        file_path = str(input("Enter file path here:"))
-        name = '{}'.format(file_path)
-        load(name, 1.5, 1.5, 45, 75)
-        y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
-        if (y == 1):
-            custom()
-
-        elif (y == 2):
-            main()
-
-        elif (y == 3):
-            quit()
-
-        else:
-            print("invalid, please try again later")
-            quit()
-
-    elif (type == 2):
-        file_path = str(input("Enter file path here:"))
-        name = '{}'.format(file_path)
-        load(name, 1.5, 1.5, 45, 75)
-        y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
-        if (y == 1):
-            custom()
-
-        elif (y == 2):
-            main()
-
-        elif (y == 3):
-            quit()
-
-        else:
-            print("invalid, please try again later")
-            quit()
-
-    elif (type == 3):
-        file_path = str(input("Enter file path here:"))
-        name = '{}'.format(file_path)
-        load(name, 1.5, 1.5, 45, -75)
-        y = int(input("would you like to\n1.try other combinations\n2.go to main menu\n3.close app\n"))
-        if (y == 1):
-            custom()
-
-        elif (y == 2):
-            main()
-
-        elif (y == 3):
-            quit()
-
-        else:
-            print("invalid, please try again later")
-            quit()
-
-    elif (type == 4):
-        main()
-
-    else:
-        print("invalid input, please try again")
-        quit()
-
-
 def mix_and_match():
     print("choose what combination of items you would like to try\n1.Hair and Beard\n2.Hair and Glasses\n3.Beard and "
-          "Glasses\n4.Hair and Beard and Glasses\n5.return to main menu")
+          "Glasses\n4.return to main menu")
 
     x = int(input("Enter what you would like to try on here"))
     if (x == 1):
@@ -718,10 +902,6 @@ def mix_and_match():
             quit()
 
     elif (x == 4):
-        print("all 3")
-
-
-    elif (x == 5):
         main()
 
     else:
@@ -731,7 +911,7 @@ def mix_and_match():
 
 def main():
     print("What would you like to try on?")
-    print("1.Hair\n2.Glasses\n3.Facial Hair\n4.Full Ensemble\n5.Custom file\n6.mix and match\n7.close program")
+    print("1.Hair\n2.Glasses\n3.Facial Hair\n4.Full Ensemble\n5.mix and match\n6.close program")
     x = int(input("Enter what you would like to try on here:"))
     if (x == 1):
         hair()
@@ -746,12 +926,9 @@ def main():
         ensemble()
 
     elif (x == 5):
-        custom()
-
-    elif (x == 6):
         mix_and_match()
 
-    elif (x == 7):
+    elif (x == 6):
         quit()
 
     else:
