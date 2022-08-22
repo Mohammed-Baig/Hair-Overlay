@@ -9,4 +9,4 @@ X location and 1 for Y location will keep it in its default location.
 
 EDIT: Finished mix and matching. Updated custom styling. Added randomizing feature
 
-Coming soon: GUI update. Additional styles
+Coming soon: GUI update. Additional styles such as necklaces and wrist watches
